@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "acbfeb9b-6634-4c00-8007-b3d721ba5dd2",
+		"name": "assignment-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18678511"
+	},
+	"item": [
+		{
+			"name": "Post Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"Alfa\",\n    \"items\": [\n        {\n            \"itemCode\": \"a123\",\n            \"description\": \"Barang Baru\",\n            \"quantity\": 2\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/orders",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/orders/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"orders",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/orders/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/orders/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"Ginanjoy Duls\",\n    \"items\": [\n        {\n            \"itemCode\": \"SS999\",\n            \"description\": \"MacBook\",\n            \"quantity\": 100\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/orders/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"orders",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
