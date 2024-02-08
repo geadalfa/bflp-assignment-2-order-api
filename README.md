@@ -12,7 +12,11 @@
 <img width="893" alt="image" src="https://github.com/geadalfa/bflp-assignment-2-order-api/assets/52628488/a9d0aacd-2b89-4aee-897b-938348dbb3cc">
 
 ## Update Order & Items [PUT]
+<img width="852" alt="image" src="https://github.com/geadalfa/bflp-assignment-2-order-api/assets/52628488/98fa72e2-d896-449f-b956-c8dc7d0ee257">
+
 
 ## Delete Order [DELETE]
+<img width="855" alt="image" src="https://github.com/geadalfa/bflp-assignment-2-order-api/assets/52628488/df98d23b-a166-4389-9254-53a0fd3ead61">
 
-### See Postman Collection --->> [Postman Collection] (https://github.com/geadalfa/bflp-assignment-2-order-api/blob/master/assignment-2.postman_collection.json)
+
+See Postman Collection --->> https://github.com/geadalfa/bflp-assignment-2-order-api/blob/master/assignment-2.postman_collection.json
