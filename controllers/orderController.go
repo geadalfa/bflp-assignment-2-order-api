@@ -66,10 +66,11 @@ func GetAllOrder(ctx *gin.Context) {
 }
 
 func DeleteOrder(c *gin.Context) {
+	orderID := c.Param("orderID")
 	var db = database.GetDB()
 
 	var order models.Order
-	if err := db.Preload("Items").First(&order, "id = ?", c.Param("orderID")).Error; err != nil {
+	if err := db.Preload("Items").First(&order, "id = ?", orderID).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
 	}
@@ -88,10 +89,11 @@ func DeleteOrder(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"data": true})
+	c.JSON(http.StatusOK, gin.H{"message": fmt.Sprintf("Order with id %v has been successfully deleted", orderID)})
 }
 
 func UpdateOrder(c *gin.Context) {
+	orderID := c.Param("orderID")
 	var db = database.GetDB()
 
 	// Parse request body
@@ -111,7 +113,7 @@ func UpdateOrder(c *gin.Context) {
 
 	// Fetch the order
 	var order models.Order
-	if err := db.Preload("Items").First(&order, "id = ?", c.Param("orderID")).Error; err != nil {
+	if err := db.Preload("Items").First(&order, "id = ?", orderID).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
 	}
@@ -161,57 +163,5 @@ func UpdateOrder(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"data": true})
+	c.JSON(http.StatusOK, gin.H{"message": fmt.Sprintf("Order with id %v has been successfully updated", orderID)})
 }
-
-// 	// Update the car record
-// 	if err := db.Save(&carUpdate).Error; err != nil {
-// 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update car"})
-// 		return
-// 	}
-
-// 	ctx.JSON(http.StatusOK, gin.H{
-// 		"message": fmt.Sprintf("Car with id %v has been successfully updated", carID),
-// 	})
-// }
-
-// func GetCar(ctx *gin.Context) {
-// 	var db = database.GetDB()
-
-// 	var carOne models.Car
-// 	err := db.First(&carOne, "Id = ?", ctx.Param("id")).Error
-// 	if err != nil {
-// 		ctx.JSON(http.StatusBadRequest, gin.H{"error": "Record not Found!"})
-// 		return
-// 	}
-
-// 	ctx.JSON(http.StatusOK, gin.H{"data": carOne})
-
-// }
-
-// func DeleteCar(c *gin.Context) {
-// 	var db = database.GetDB()
-
-// 	var carDelete models.Car
-// 	err := db.First(&carDelete, "Id = ?", c.Param("id")).Error
-// 	if err != nil {
-// 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
-// 		return
-// 	}
-
-// 	db.Delete(&carDelete)
-// 	c.JSON(http.StatusOK, gin.H{"data": true})
-// }
-
-// func GetAllCar(ctx *gin.Context) {
-// 	var db = database.GetDB()
-
-// 	var cars []models.Car
-// 	err := db.Find(&cars).Error
-
-// 	if err != nil {
-// 		fmt.Println("Error getting datas:", err.Error())
-// 	}
-
-// 	ctx.JSON(http.StatusOK, gin.H{"data": cars})
-// }
