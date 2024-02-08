@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"customerName\": \"Alfa\",\n    \"items\": [\n        {\n            \"itemCode\": \"a123\",\n            \"description\": \"Barang Baru\",\n            \"quantity\": 2\n        }\n    ]\n}",
+					"raw": "{\n    \"customerName\": \"Ginanjoylah\",\n    \"items\": [\n        {\n            \"itemCode\": \"c999\",\n            \"description\": \"Samsung keknya\",\n            \"quantity\": 10\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -38,13 +38,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/orders/4",
+					"raw": "{{BASE_URL}}/orders/1",
 					"host": [
 						"{{BASE_URL}}"
 					],
 					"path": [
 						"orders",
-						"4"
+						"1"
 					]
 				}
 			},
@@ -74,13 +74,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/orders/3",
+					"raw": "{{BASE_URL}}/orders/4",
 					"host": [
 						"{{BASE_URL}}"
 					],
 					"path": [
 						"orders",
-						"3"
+						"4"
 					]
 				}
 			},
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"customerName\": \"Ginanjoy Duls\",\n    \"items\": [\n        {\n            \"itemCode\": \"SS999\",\n            \"description\": \"MacBook\",\n            \"quantity\": 100\n        }\n    ]\n}",
+					"raw": "{\n    \"customerName\": \"Ginanjoy Duls\",\n    \"items\": [\n        {\n            \"itemCode\": \"c999\",\n            \"description\": \"Vision Pro\",\n            \"quantity\": 8\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,13 +101,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/orders/4",
+					"raw": "{{BASE_URL}}/orders/5",
 					"host": [
 						"{{BASE_URL}}"
 					],
 					"path": [
 						"orders",
-						"4"
+						"5"
 					]
 				}
 			},
