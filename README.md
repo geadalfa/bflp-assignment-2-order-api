@@ -2,6 +2,9 @@
 ## Assignment 2 `Order-API`
 ### BFLP IT 19 Geadalfa Giyanda
 
+## Postman Collection
+https://documenter.getpostman.com/view/18678511/2sA2r3ZR6r
+
 ## Get One Order [GET]
 <img width="828" alt="image" src="https://github.com/geadalfa/bflp-assignment-2-order-api/assets/52628488/44e7457e-24af-4f3a-bc9f-930a18b8cbd6">
 
